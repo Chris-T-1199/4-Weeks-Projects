@@ -77,6 +77,4 @@ async function loadNasaEvents() {
     }
 }
 
-// test pour commit
-
 loadNasaEvents();
