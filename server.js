@@ -7,7 +7,7 @@ app.use(express.static("public"));
 
 app.get("/api/events", async (req, res) => {
     const apiUrl =
-        "https://ll.thespacedevs.com/2.3.0/events/upcoming/?limit=10";
+        "https://ll.thespacedevs.com/2.3.0/events/upcoming/?limit=50";
 
     try {
         const response = await fetch(apiUrl);
@@ -27,7 +27,7 @@ app.get("/api/events", async (req, res) => {
                 description: event.description,
                 date: event.date,
                 type: event.type?.name || "Unknown",
-                image: event.feature_image,
+                image: event.image?.image_url || null,
                 newsUrl: event.news_url
             };
         });

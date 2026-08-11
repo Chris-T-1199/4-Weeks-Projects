@@ -1,6 +1,98 @@
+/* Base Card Container */
 .nasa-event-card {
 
-    border: solid red 5px;
-    background-color: bisque;
+    display: flex;
+    flex-direction: column; /* Stacked by default for mobile first */
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1e1e24;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 }
+
+/* Subtle hover effect for interactive feel */
+.nasa-event-card:hover {
+
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: #8be9fd; /* Accent glow on hover */
+
+}
+
+/* Text Content Wrapper (Helps alignment) */
+.nasa-event-card-content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.nasa-event-image {
+    width: 100%; /* Spans the full width of the card */
+    height: auto; /* Fixed height */
+    aspect-ratio: 16/9;
+    object-fit: cover; /* Prevents image dostortion */
+    border-radius: 8px;
+
+}
+
+.nasa-event-type {
+
+    color: #8be9fd;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    order: -1; /* Keeps label at the very top */
+
+    
+    
+}
+
+.nasa-event-title {
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+
+}
+
+.nasa-event-description {
+
+    color: #f8f8f2;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+}
+
+/* Responsive Media Query for Desktop Screens */
+@media (min-width: 768px) {
+    .nasa-event-card {
+        flex-direction: row; /*Side-by-side layout on larger screens */
+        align-items: center;
+
+    }
+}
+
+.nasa-event-image {
+    width: 250px; /* Fixed width on desktop to prevent huge stretched images */
+    min-width: 250px;
+    height: 140px;
+
+}
+
+.nasa-event-card-content {
+
+    
+
+}
+
+
+
