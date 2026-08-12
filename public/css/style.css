@@ -34,6 +34,7 @@
 }
 
 .nasa-event-image {
+
     width: 100%; /* Spans the full width of the card */
     height: auto; /* Fixed height */
     aspect-ratio: 16/9;
@@ -51,8 +52,6 @@
     font-weight: 700;
     order: -1; /* Keeps label at the very top */
 
-    
-    
 }
 
 .nasa-event-title {
@@ -74,6 +73,7 @@
 
 /* Responsive Media Query for Desktop Screens */
 @media (min-width: 768px) {
+
     .nasa-event-card {
         flex-direction: row; /*Side-by-side layout on larger screens */
         align-items: center;
@@ -82,6 +82,7 @@
 }
 
 .nasa-event-image {
+
     width: 250px; /* Fixed width on desktop to prevent huge stretched images */
     min-width: 250px;
     height: 140px;
@@ -90,9 +91,6 @@
 
 .nasa-event-card-content {
 
-    
+    text-align: left; /* Clean left-alignment for desktop rows */
 
 }
-
-
-
