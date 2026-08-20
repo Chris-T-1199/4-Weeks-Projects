@@ -2,7 +2,7 @@
 .nasa-event-card {
 
     display: flex;
-    flex-direction: column; /* Stacked by default for mobile first */
+    flex-direction: row; /* Stacked by default for mobile first */
     gap: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: #1e1e24;
@@ -68,6 +68,12 @@
     color: #f8f8f2;
     font-size: 0.95rem;
     line-height: 1.5;
+
+}
+
+.nasa-event-date {
+
+    color: #8be9fd;
 
 }
 

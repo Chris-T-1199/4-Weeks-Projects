@@ -42,14 +42,19 @@ function displayNasaEvents(nasaEvents, containerSelector) {
         nasaEventDescription.classList.add("nasa-event-description");
         nasaEventDescription.textContent = nasaEvent.description
 
-
         const nasaEventImage = document.createElement("img");
         nasaEventImage.classList.add("nasa-event-image");
         nasaEventImage.src = nasaEvent.image;
         nasaEventImage.alt = nasaEvent.name;
+
+        const nasaEventDate = document.createElement("span");
+        nasaEventDate.classList.add("nasa-event-date");
+        nasaEventDate.textContent = nasaEvent.date;
        
 
         // ----------------- Coller aux parents -----------------
+
+        nasaEventCard.appendChild(nasaEventDate);
         nasaEventCard.appendChild(nasaEventImage);
         nasaEventCard.appendChild(nasaEventDescription);
         nasaEventCard.appendChild(nasaEventType);
